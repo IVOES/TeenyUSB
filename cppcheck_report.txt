@@ -1,0 +1,1142 @@
+class/msc/tusbd_msc.c:147:19: error: Buffer is accessed out of bounds: vpd->vpd_data [bufferAccessOutOfBounds]
+        memcpy(vpd->vpd_data, "TUSB123456", 10);
+                  ^
+class/tusbd.c:45:25: style: The statement 'if (itf->dev!=dev) itf->dev=dev' is logically equivalent to 'itf->dev=dev'. [duplicateConditionalAssign]
+            if(itf->dev != dev){
+                        ^
+class/tusbd.c:46:26: note: Assignment 'itf->dev=dev'
+                itf->dev = dev;
+                         ^
+class/tusbd.c:45:25: note: Condition 'itf->dev!=dev' is redundant
+            if(itf->dev != dev){
+                        ^
+class/tusbh.c:175:11: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+    int r = 0;
+          ^
+core/teeny_usb_device.c:578:9: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        TUSB_LOGD("Device set address to %d\n", dev->addr);
+        ^
+core/teeny_usb_device.c:143:68: style:inconclusive: Function 'tusb_class_request' argument 2 names different: declaration 'setup' definition 'setup_req'. [funcArgNamesDifferent]
+WEAK int tusb_class_request(tusb_device_t *dev, tusb_setup_packet *setup_req)
+                                                                   ^
+core/teeny_usb_device.h:366:63: note: Function 'tusb_class_request' argument 2 names different: declaration 'setup' definition 'setup_req'.
+int tusb_class_request(tusb_device_t* dev, tusb_setup_packet* setup);
+                                                              ^
+core/teeny_usb_device.c:143:68: note: Function 'tusb_class_request' argument 2 names different: declaration 'setup' definition 'setup_req'.
+WEAK int tusb_class_request(tusb_device_t *dev, tusb_setup_packet *setup_req)
+                                                                   ^
+core/teeny_usb_device.h:120:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    uint8_t  desc_buffer[DESCRIPTOR_BUFFER_SIZE]; /**< descriptor buffer, used for qualifier or DMA   */
+^
+core/teeny_usb_device.c:250:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (8 > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:289:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (len > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:309:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (len > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.h:120:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE;TUSB_SUPPORT_WCID' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    uint8_t  desc_buffer[DESCRIPTOR_BUFFER_SIZE]; /**< descriptor buffer, used for qualifier or DMA   */
+^
+core/teeny_usb_device.c:250:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE;TUSB_SUPPORT_WCID' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (8 > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:289:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE;TUSB_SUPPORT_WCID' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (len > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:309:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE;TUSB_SUPPORT_WCID' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (len > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:395:0: information: Skipping configuration 'DESCRIPTOR_BUFFER_SIZE;TUSB_SUPPORT_WCID' since the value of 'DESCRIPTOR_BUFFER_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if (len > DESCRIPTOR_BUFFER_SIZE)
+^
+core/teeny_usb_device.c:228:17: style: Condition 'desc' is always true [knownConditionTrueFalse]
+            if (desc)
+                ^
+core/teeny_usb_device.c:225:83: note: Assuming condition 'dev->descriptors->extra->wcid_bos' is true
+        if (dev->descriptors && dev->descriptors->extra && dev->descriptors->extra->wcid_bos)
+                                                                                  ^
+core/teeny_usb_device.c:227:43: note: Assignment 'desc=dev->descriptors->extra->wcid_bos', assigned value is 1
+            desc = dev->descriptors->extra->wcid_bos;
+                                          ^
+core/teeny_usb_device.c:228:17: note: Condition 'desc' is always true
+            if (desc)
+                ^
+core/teeny_usb_device.c:378:21: style: Condition 'desc' is always true [knownConditionTrueFalse]
+                if (desc)
+                    ^
+core/teeny_usb_device.c:375:87: note: Assuming condition 'dev->descriptors->extra->wcid_desc_set' is true
+            if (dev->descriptors && dev->descriptors->extra && dev->descriptors->extra->wcid_desc_set)
+                                                                                      ^
+core/teeny_usb_device.c:377:47: note: Assignment 'desc=dev->descriptors->extra->wcid_desc_set', assigned value is 1
+                desc = dev->descriptors->extra->wcid_desc_set;
+                                              ^
+core/teeny_usb_device.c:378:21: note: Condition 'desc' is always true
+                if (desc)
+                    ^
+core/teeny_usb_host.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+core/teeny_usb_osal.h:87:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+tusb_ev_t* tusb_ev_create(void);
+^
+core/teeny_usb_osal.h:93:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+void tusb_ev_delete(tusb_ev_t* ev);
+^
+core/teeny_usb_osal.h:99:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+void tusb_ev_set(tusb_ev_t* ev);
+^
+core/teeny_usb_osal.h:105:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int tusb_ev_wait(tusb_ev_t* ev, uint32_t timeout_in_ms);
+^
+core/teeny_usb_osal.h:54:0: information: Skipping configuration 'TUSB_MQ_T' since the value of 'TUSB_MQ_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+tusb_mq_t* tusb_mq_create(void);
+^
+core/teeny_usb_osal.h:56:0: information: Skipping configuration 'TUSB_MQ_T' since the value of 'TUSB_MQ_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+void tusb_mq_free(tusb_mq_t* mq);
+^
+core/teeny_usb_osal.h:58:0: information: Skipping configuration 'TUSB_MQ_T' since the value of 'TUSB_MQ_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int tusb_mq_init(tusb_mq_t* mq);
+^
+core/teeny_usb_osal.h:60:0: information: Skipping configuration 'TUSB_MQ_T' since the value of 'TUSB_MQ_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int tusb_mq_post(tusb_mq_t* mq, const tusb_msg_t* msg);
+^
+core/teeny_usb_osal.h:62:0: information: Skipping configuration 'TUSB_MQ_T' since the value of 'TUSB_MQ_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int tusb_mq_get(tusb_mq_t* mq, tusb_msg_t* msg);
+^
+core/teeny_usb_no_os.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+core/teeny_usb_no_os.c:146:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+tusb_ev_t* tusb_ev_create(void)
+^
+core/teeny_usb_no_os.c:148:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    tusb_ev_t* ev = (tusb_ev_t*)tusb_malloc(sizeof(tusb_ev_t));
+^
+core/teeny_usb_no_os.c:155:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+void tusb_ev_delete(tusb_ev_t* ev)
+^
+core/teeny_usb_no_os.c:162:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+void tusb_ev_set(tusb_ev_t* ev)
+^
+core/teeny_usb_no_os.c:171:0: information: Skipping configuration 'TUSB_EV_T' since the value of 'TUSB_EV_T' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+int tusb_ev_wait(tusb_ev_t* ev, uint32_t timeout_in_ms)
+^
+core/teeny_usb_no_os.c:157:0: information: Skipping configuration 'TUSB_FREE' since the value of 'TUSB_FREE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    tusb_free(ev);
+^
+core/teeny_usb_no_os.c:148:0: information: Skipping configuration 'TUSB_MALLOC' since the value of 'TUSB_MALLOC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    tusb_ev_t* ev = (tusb_ev_t*)tusb_malloc(sizeof(tusb_ev_t));
+^
+core/teeny_usb_retarget.c:80:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:105:25: style: Same expression on both sides of '|'. [duplicateExpression]
+        cmd_set_val = 0 |                        //ACK's index
+                        ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:150:21: style: Same expression on both sides of '|'. [duplicateExpression]
+    cmd_set_val = 0 |
+                    ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:217:21: style: Same expression on both sides of '|'. [duplicateExpression]
+    cmd_set_val = 0 |
+                    ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:124:32: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+            if(cmd_rsp_val & (1<<31))
+                               ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:124:32: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+            if(cmd_rsp_val & (1<<31))
+                               ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:214:27: style: Variable 'disk_block_num' is assigned a value that is never used. [unreadVariable]
+    UINT32 disk_block_num = 0;
+                          ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:246:28: style: Variable 'disk_block_num' is assigned a value that is never used. [unreadVariable]
+            disk_block_num = ( (disk_block_num) << (((pEMMCPara->EMMC_CSD[1]>>15)&0x07) + 2));
+                           ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:79:19: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+ PFIC->SCTLR &= ~1<<2;    // ÉèÖÃÄÚºËPFIC_SCTLR¼Ä´æÆ÷µÄSleepDeep×Ö¶ÎÎª0
+                  ^
+driver_ch56x/tusb_dev_drv_ch56x.c:289:45: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+    ep->tx_need_zlp = option & TUSB_TXF_ZLP ? 1 : 0;
+                                            ^
+driver_ch56x/tusb_dev_drv_ch56x.c:604:32: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        USBSS->USB_CONTROL |= 1<<31;
+                               ^
+driver_ch56x/tusb_dev_drv_ch56x.c:604:32: error: Signed integer overflow for expression '1<<31'. [integerOverflow]
+        USBSS->USB_CONTROL |= 1<<31;
+                               ^
+driver_stm32/tusb_dev_drv_stm32_fs.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 28 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+driver_stm32/tusb_dev_drv_stm32_otg.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 27 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+driver_stm32/tusb_drv_stm32_otg_common.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 28 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+driver_stm32/tusb_host_drv_stm32_otg.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 25 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+sample/boards/simulator/debug_output.c:9:21: style: struct member '__FILE::handle' is never used. [unusedStructMember]
+struct __FILE { int handle; /* Add whatever needed */ };
+                    ^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:194:49: style: The scope of the variable 'prediv1factor' can be reduced. [variableScope]
+  uint32_t tmp = 0, pllmull = 0, pllsource = 0, prediv1factor = 0;
+                                                ^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:205:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    SystemCoreClock = HSE_VALUE;
+^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:222:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = (HSE_VALUE / prediv1factor) * pllmull;
+^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:226:0: information: Skipping configuration 'HSI48_VALUE' since the value of 'HSI48_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    SystemCoreClock = HSI48_VALUE;
+^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:202:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:216:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = (HSI_VALUE >> 1) * pllmull;
+^
+sample/boards/stm32f072c8t6/system_stm32f0xx.c:229:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:159:0: information: Skipping configuration 'STM32F10X_CL;STM32F10X_HD_VL;STM32F10X_LD_VL;STM32F10X_MD_VL;SYSCLK_FREQ_HSE' since the value of 'SYSCLK_FREQ_HSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_HSE;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:163:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_36MHz' since the value of 'SYSCLK_FREQ_36MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_36MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:165:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_48MHz' since the value of 'SYSCLK_FREQ_48MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_48MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:167:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_56MHz' since the value of 'SYSCLK_FREQ_56MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_56MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:159:0: information: Skipping configuration 'STM32F10X_HD_VL;STM32F10X_LD_VL;STM32F10X_MD_VL;SYSCLK_FREQ_HSE' since the value of 'SYSCLK_FREQ_HSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_HSE;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f103ret6/system_stm32f10x.c:163:0: information: Skipping configuration 'SYSCLK_FREQ_36MHz' since the value of 'SYSCLK_FREQ_36MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_36MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:419:0: information: Skipping configuration 'FLASH_ACR_LATENCY' since the value of 'FLASH_ACR_LATENCY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if(FLatency > (FLASH->ACR & FLASH_ACR_LATENCY))
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:426:0: information: Skipping configuration 'FLASH_ACR_LATENCY' since the value of 'FLASH_ACR_LATENCY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if((FLASH->ACR & FLASH_ACR_LATENCY) != FLatency)
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:442:0: information: Skipping configuration 'FLASH_ACR_LATENCY' since the value of 'FLASH_ACR_LATENCY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  if(FLatency < (FLASH->ACR & FLASH_ACR_LATENCY))
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:449:0: information: Skipping configuration 'FLASH_ACR_LATENCY' since the value of 'FLASH_ACR_LATENCY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    if((FLASH->ACR & FLASH_ACR_LATENCY) != FLatency)
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:519:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:545:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+          SystemCoreClock = (HSE_VALUE >> 1U) * pllmull;
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:549:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+          SystemCoreClock = HSE_VALUE * pllmull;
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:516:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:533:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        SystemCoreClock = (HSI_VALUE >> 1U) * pllmull;
+^
+sample/boards/stm32f107vc/system_stm32f1xx.c:595:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:262:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:292:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        SystemCoreClock = (HSE_VALUE / predivfactor) * pllmull;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:259:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:286:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        SystemCoreClock = (HSI_VALUE >> 1) * pllmull;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:297:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f3_disco/system_stm32f3xx.c:283:0: information: Skipping configuration 'RCC_CFGR_PLLSRC_HSI_DIV2' since the value of 'RCC_CFGR_PLLSRC_HSI_DIV2' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      if (pllsource == RCC_CFGR_PLLSRC_HSI_DIV2)
+^
+sample/boards/stm32f407_evk/board.c:65:24: error: Shifting 32-bit value by 40 bits is undefined behaviour [shiftTooManyBits]
+    GPIOC->AFR[1] &= ~(AF(0xf,10) | AF(0xf,11));
+                       ^
+sample/boards/stm32f407_evk/board.c:65:37: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOC->AFR[1] &= ~(AF(0xf,10) | AF(0xf,11));
+                                    ^
+sample/boards/stm32f407_evk/board.c:66:24: error: Shifting 32-bit value by 40 bits is undefined behaviour [shiftTooManyBits]
+    GPIOC->AFR[1] |=  (AF(GPIO_AF7_USART3,10) | AF(GPIO_AF7_USART3,11));
+                       ^
+sample/boards/stm32f407_evk/board.c:66:49: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOC->AFR[1] |=  (AF(GPIO_AF7_USART3,10) | AF(GPIO_AF7_USART3,11));
+                                                ^
+sample/boards/stm32f723e_disco/board.c:66:24: warning: Expression '(6-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] &= ~(AF(0xf,6) | AF(0xf,7));
+                       ^
+sample/boards/stm32f723e_disco/board.c:66:36: warning: Expression '(7-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] &= ~(AF(0xf,6) | AF(0xf,7));
+                                   ^
+sample/boards/stm32f723e_disco/board.c:67:24: warning: Expression '(6-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] |=  (AF(GPIO_AF8_USART6,6) | AF(GPIO_AF8_USART6,7));
+                       ^
+sample/boards/stm32f723e_disco/board.c:67:48: warning: Expression '(7-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] |=  (AF(GPIO_AF8_USART6,6) | AF(GPIO_AF8_USART6,7));
+                                               ^
+sample/boards/stm32f723e_disco/system_stm32f7xx_HSE25MHz.c:562:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+sample/boards/stm32f723e_disco/system_stm32f7xx_HSE25MHz.c:575:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSE_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+sample/boards/stm32f723e_disco/system_stm32f7xx_HSE25MHz.c:559:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f723e_disco/system_stm32f7xx_HSE25MHz.c:580:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSI_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+sample/boards/stm32f723e_disco/system_stm32f7xx_HSE25MHz.c:587:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f767zi_nucleo/board.c:65:24: error: Shifting 32-bit value by 32 bits is undefined behaviour [shiftTooManyBits]
+    GPIOD->AFR[1] &= ~(AF(0xf,8) | AF(0xf,9));
+                       ^
+sample/boards/stm32f767zi_nucleo/board.c:65:36: error: Shifting 32-bit value by 36 bits is undefined behaviour [shiftTooManyBits]
+    GPIOD->AFR[1] &= ~(AF(0xf,8) | AF(0xf,9));
+                                   ^
+sample/boards/stm32f767zi_nucleo/board.c:66:24: error: Shifting 32-bit value by 32 bits is undefined behaviour [shiftTooManyBits]
+    GPIOD->AFR[1] |=  (AF(GPIO_AF7_USART3,8) | AF(GPIO_AF7_USART3,9));
+                       ^
+sample/boards/stm32f767zi_nucleo/board.c:66:48: error: Shifting 32-bit value by 36 bits is undefined behaviour [shiftTooManyBits]
+    GPIOD->AFR[1] |=  (AF(GPIO_AF7_USART3,8) | AF(GPIO_AF7_USART3,9));
+                                               ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:237:14: style: The scope of the variable 'bufferoffset' can be reduced. [variableScope]
+    uint32_t bufferoffset = 0;
+             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:238:14: style: The scope of the variable 'payloadoffset' can be reduced. [variableScope]
+    uint32_t payloadoffset = 0;
+             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:239:14: style: The scope of the variable 'byteslefttocopy' can be reduced. [variableScope]
+    uint32_t byteslefttocopy = 0;
+             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:107:24: error: Shifting 32-bit value by 52 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] &= ~(AF(0xf,13));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:108:24: error: Shifting 32-bit value by 52 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] |=  (AF(GPIO_AF11_ETH,13));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:121:24: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOG->AFR[1] &= ~(AF(0xf,11) | AF(0xf,13));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:121:37: error: Shifting 32-bit value by 52 bits is undefined behaviour [shiftTooManyBits]
+    GPIOG->AFR[1] &= ~(AF(0xf,11) | AF(0xf,13));
+                                    ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:122:24: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOG->AFR[1] |=  (AF(GPIO_AF11_ETH,11) | AF(GPIO_AF11_ETH,13));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:122:47: error: Shifting 32-bit value by 52 bits is undefined behaviour [shiftTooManyBits]
+    GPIOG->AFR[1] |=  (AF(GPIO_AF11_ETH,11) | AF(GPIO_AF11_ETH,13));
+                                              ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:100:24: warning: Expression '(1-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] &= ~(AF(0xf,1) | AF(0xf,2) | AF(0xf,7));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:100:36: warning: Expression '(2-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] &= ~(AF(0xf,1) | AF(0xf,2) | AF(0xf,7));
+                                   ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:100:48: warning: Expression '(7-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] &= ~(AF(0xf,1) | AF(0xf,2) | AF(0xf,7));
+                                               ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:101:24: warning: Expression '(1-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,2) | AF(GPIO_AF11_ETH,7));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:101:46: warning: Expression '(2-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,2) | AF(GPIO_AF11_ETH,7));
+                                             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:101:68: warning: Expression '(7-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOA->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,2) | AF(GPIO_AF11_ETH,7));
+                                                                   ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:114:24: warning: Expression '(1-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] &= ~(AF(0xf,1) | AF(0xf,4) | AF(0xf,5));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:114:36: warning: Expression '(4-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] &= ~(AF(0xf,1) | AF(0xf,4) | AF(0xf,5));
+                                   ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:114:48: warning: Expression '(5-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] &= ~(AF(0xf,1) | AF(0xf,4) | AF(0xf,5));
+                                               ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:115:24: warning: Expression '(1-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,4) | AF(GPIO_AF11_ETH,5));
+                       ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:115:46: warning: Expression '(4-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,4) | AF(GPIO_AF11_ETH,5));
+                                             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:115:68: warning: Expression '(5-8)*4' can have a negative value. That is converted to an unsigned value and used in an unsigned calculation. [signConversion]
+    GPIOC->AFR[0] |=  (AF(GPIO_AF11_ETH,1) | AF(GPIO_AF11_ETH,4) | AF(GPIO_AF11_ETH,5));
+                                                                   ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:207:20: style: Variable 'bufferoffset' is assigned a value that is never used. [unreadVariable]
+      bufferoffset = bufferoffset + byteslefttocopy;
+                   ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:237:27: style: Variable 'bufferoffset' is assigned a value that is never used. [unreadVariable]
+    uint32_t bufferoffset = 0;
+                          ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:238:28: style: Variable 'payloadoffset' is assigned a value that is never used. [unreadVariable]
+    uint32_t payloadoffset = 0;
+                           ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:239:30: style: Variable 'byteslefttocopy' is assigned a value that is never used. [unreadVariable]
+    uint32_t byteslefttocopy = 0;
+                             ^
+sample/boards/stm32f767zi_nucleo/f767rndis_eth_init.c:271:20: style: Variable 'bufferoffset' is assigned a value that is never used. [unreadVariable]
+      bufferoffset = bufferoffset + byteslefttocopy;
+                   ^
+sample/boards/stm32f767zi_nucleo/system_stm32f7xx.c:562:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+sample/boards/stm32f767zi_nucleo/system_stm32f7xx.c:575:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSE_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+sample/boards/stm32f767zi_nucleo/system_stm32f7xx.c:559:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32f767zi_nucleo/system_stm32f7xx.c:580:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSI_VALUE / pllm) * ((RCC->PLLCFGR & RCC_PLLCFGR_PLLN) >> 6);
+^
+sample/boards/stm32f767zi_nucleo/system_stm32f7xx.c:587:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSI_VALUE;
+^
+sample/boards/stm32h743_openmv/board.c:120:19: style: Condition 'micro_tick>40' is always false [knownConditionTrueFalse]
+    if(micro_tick > 40){
+                  ^
+sample/boards/stm32h743_openmv/board.c:117:39: note: Assignment 'micro_tick=0', assigned value is 0
+    static __IO uint32_t micro_tick = 0;
+                                      ^
+sample/boards/stm32h743_openmv/board.c:119:5: note: micro_tick is incremented', new value is 1
+    micro_tick++;
+    ^
+sample/boards/stm32h743_openmv/board.c:120:19: note: Condition 'micro_tick>40' is always false
+    if(micro_tick > 40){
+                  ^
+sample/boards/stm32h743_openmv/board.c:73:24: error: Shifting 32-bit value by 40 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] &= ~(AF(0xf,10) | AF(0xf,11));
+                       ^
+sample/boards/stm32h743_openmv/board.c:73:37: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] &= ~(AF(0xf,10) | AF(0xf,11));
+                                    ^
+sample/boards/stm32h743_openmv/board.c:74:24: error: Shifting 32-bit value by 40 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] |=  (AF(GPIO_AF7_USART3,10) | AF(GPIO_AF7_USART3,11));
+                       ^
+sample/boards/stm32h743_openmv/board.c:74:49: error: Shifting 32-bit value by 44 bits is undefined behaviour [shiftTooManyBits]
+    GPIOB->AFR[1] |=  (AF(GPIO_AF7_USART3,10) | AF(GPIO_AF7_USART3,11));
+                                                ^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:156:61: style: The scope of the variable 'hsivalue' can be reduced. [variableScope]
+ uint32_t pllp = 1, pllsource = 0, pllm = 1 ,pllfracen =0 , hsivalue = 0;
+                                                            ^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:177:0: information: Skipping configuration 'CSI_VALUE' since the value of 'CSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    sysclockfreq = CSI_VALUE;
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:210:0: information: Skipping configuration 'CSI_VALUE' since the value of 'CSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      pllvco = (CSI_VALUE / pllm) * ((RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/0x2000) +1 );
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:218:0: information: Skipping configuration 'CSI_VALUE' since the value of 'CSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      pllvco = (CSI_VALUE / pllm) * ((RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/0x2000) +1 );
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:226:0: information: Skipping configuration 'CSI_VALUE' since the value of 'CSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    sysclockfreq = CSI_VALUE;
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:181:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    sysclockfreq = HSE_VALUE;
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:214:0: information: Skipping configuration 'HSE_VALUE' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      pllvco = (HSE_VALUE / pllm) * ((RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/0x2000) +1 );
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:167:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        sysclockfreq = (uint32_t) (HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER()>> 3));
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:171:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        sysclockfreq = (uint32_t) HSI_VALUE;
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:200:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        hsivalue= (HSI_VALUE >> (__HAL_RCC_GET_HSI_DIVIDER()>> 3));
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:205:0: information: Skipping configuration 'HSI_VALUE' since the value of 'HSI_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        pllvco = (HSI_VALUE / pllm) * ((RCC->PLL1DIVR & RCC_PLL1DIVR_N1) + (fracn1/0x2000) +1 );
+^
+sample/composite/composite_device.c:281:0: information: Skipping configuration 'FLASH_SIZE' since the value of 'FLASH_SIZE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  *block_num =  BLOCK_COUNT;
+^
+sample/win32app/test_winusb/test_winusb.cpp:29:8: style: Variable 'hr' is assigned a value that is never used. [unreadVariable]
+    hr = HRESULT_FROM_WIN32(CM_MapCrToWin32Err(cr, ERROR_INVALID_DATA));
+       ^
+third_part/fatfs/source/diskio.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_part/fatfs/source/diskio.c:32:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = RAM_disk_status();
+         ^
+third_part/fatfs/source/diskio.c:39:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = MMC_disk_status();
+         ^
+third_part/fatfs/source/diskio.c:46:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = USB_disk_status();
+         ^
+third_part/fatfs/source/diskio.c:27:10: style: Variable 'stat' is not assigned a value. [unassignedVariable]
+ DSTATUS stat;
+         ^
+third_part/fatfs/source/diskio.c:70:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = RAM_disk_initialize();
+         ^
+third_part/fatfs/source/diskio.c:77:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = MMC_disk_initialize();
+         ^
+third_part/fatfs/source/diskio.c:84:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = USB_disk_initialize();
+         ^
+third_part/fatfs/source/diskio.c:65:10: style: Variable 'stat' is not assigned a value. [unassignedVariable]
+ DSTATUS stat;
+         ^
+third_part/fatfs/source/diskio.c:113:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = RAM_disk_read(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:122:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = MMC_disk_read(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:131:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = USB_disk_read(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:163:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = RAM_disk_write(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:172:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = MMC_disk_write(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:181:10: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+  result = USB_disk_write(buff, sector, count);
+         ^
+third_part/fatfs/source/diskio.c:205:6: style: Unused variable: result [unusedVariable]
+ int result;
+     ^
+third_part/fatfs/source/ff.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 76 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_part/fatfs/source/ff.c:3012:14: warning: The address of local variable 'path' might be accessed at non-zero index. [objectIndex]
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+third_part/fatfs/source/ff.c:3102:26: note: Address of variable taken here.
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_part/fatfs/source/ff.c:3102:26: note: Calling function 'create_name', 2nd argument '&path' value is lifetime=path
+   res = create_name(dp, &path); /* Get a segment name of the path */
+                         ^
+third_part/fatfs/source/ff.c:3012:14: note: The address of local variable 'path' might be accessed at non-zero index.
+  c = (BYTE)p[si++];    /* Get a byte */
+             ^
+third_part/fatfs/source/ff.c:3831:11: style: The if condition is the same as the previous if condition [duplicateCondition]
+  if (res == FR_OK) {
+          ^
+third_part/fatfs/source/ff.c:3810:11: note: First condition
+  if (res == FR_OK) {
+          ^
+third_part/fatfs/source/ff.c:3831:11: note: Second condition
+  if (res == FR_OK) {
+          ^
+third_part/fatfs/source/ff.c:5096:13: style: Condition 'res==FR_OK' is always true [knownConditionTrueFalse]
+    if (res == FR_OK) {
+            ^
+third_part/fatfs/source/ff.c:5078:12: note: Assuming that condition 'res==FR_OK' is not redundant
+   if (res == FR_OK) {
+           ^
+third_part/fatfs/source/ff.c:5096:13: note: Condition 'res==FR_OK' is always true
+    if (res == FR_OK) {
+            ^
+third_part/fatfs/source/ff.c:1718:8: style: The scope of the variable 'csz' can be reduced. [variableScope]
+ DWORD csz, clst;
+       ^
+third_part/fatfs/source/ff.c:6732:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+ TCHAR c, d, str[32], *p;
+       ^
+third_part/fatfs/source/ff.c:763:9: style: Unsigned expression 'c' can't be negative so it is unnecessary to test it. [unsignedPositive]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+        ^
+third_part/fatfs/source/ff.c:763:27: style: Checking if unsigned expression 'c' is less than zero. [unsignedLessThanZero]
+  if (c >= DbcTbl[8] && c <= DbcTbl[9]) return 1;
+                          ^
+third_part/fatfs/source/ff.c:6703:7: style:inconclusive: Function 'f_puts' argument 2 names different: declaration 'cp' definition 'fp'. [funcArgNamesDifferent]
+ FIL* fp    /* Pointer to the file object */
+      ^
+third_part/fatfs/source/ff.h:335:36: note: Function 'f_puts' argument 2 names different: declaration 'cp' definition 'fp'.
+int f_puts (const TCHAR* str, FIL* cp);        /* Put a string to the file */
+                                   ^
+third_part/fatfs/source/ff.c:6703:7: note: Function 'f_puts' argument 2 names different: declaration 'cp' definition 'fp'.
+ FIL* fp    /* Pointer to the file object */
+      ^
+third_part/fatfs/source/ff.c:6723:15: style:inconclusive: Function 'f_printf' argument 2 names different: declaration 'str' definition 'fmt'. [funcArgNamesDifferent]
+ const TCHAR* fmt, /* Pointer to the format string */
+              ^
+third_part/fatfs/source/ff.h:336:37: note: Function 'f_printf' argument 2 names different: declaration 'str' definition 'fmt'.
+int f_printf (FIL* fp, const TCHAR* str, ...);      /* Put a formatted string to the file */
+                                    ^
+third_part/fatfs/source/ff.c:6723:15: note: Function 'f_printf' argument 2 names different: declaration 'str' definition 'fmt'.
+ const TCHAR* fmt, /* Pointer to the format string */
+              ^
+third_part/fatfs/source/ff.c:1452:14: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+ FRESULT res = FR_OK;
+             ^
+third_part/fatfs/source/ffsystem.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+third_part/fatfs/source/ffunicode.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+class/cdc/tusbd_cdc_rndis.c:104:19: error: Null pointer dereference: data [ctunullpointer]
+    memcpy(c + 1, data, size);
+                  ^
+class/cdc/tusbd_cdc_rndis.c:155:46: note: Calling function rndis_query_complete, 3rd argument is null
+        default:                             rndis_query_cmplt(RNDIS_STATUS_FAILURE, NULL, 0); return;
+                                             ^
+class/cdc/tusbd_cdc_rndis.c:104:19: note: Dereferencing argument data that is null
+    memcpy(c + 1, data, size);
+                  ^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:770:0: style: The function 'AES_EMMCReadMulSec' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:692:0: style: The function 'AES_EMMCWriteMulSec' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_bus8.c:39:0: style: The function 'BUS8_Init' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_dvp.c:81:0: style: The function 'DVP_Cfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_dvp.c:26:0: style: The function 'DVP_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_dvp.c:48:0: style: The function 'DVP_Mode' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_ecdc.c:22:0: style: The function 'ECDC_Init' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_ecdc.c:137:0: style: The function 'ECDC_SelfDMA' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_ecdc.c:114:0: style: The function 'ECDC_SingleRegister' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:356:0: style: The function 'EMMCCardConfig' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:405:0: style: The function 'EMMCCardConfig_N' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:563:0: style: The function 'EMMCCardReadMulSec' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:525:0: style: The function 'EMMCCardReadOneSec' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:620:0: style: The function 'EMMCCardWriteMulSec' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:16:0: style: The function 'EMMCIO0Init' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_emmc.c:474:0: style: The function 'EMMCIOTransErrorDeal' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:227:0: style: The function 'GPIOA_ITModeCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:31:0: style: The function 'GPIOA_ModeCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:273:0: style: The function 'GPIOB_ITModeCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:133:0: style: The function 'GPIOB_ModeCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:485:0: style: The function 'GPIOMco' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_gpio.c:469:0: style: The function 'GPIOPinRemap' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_clk.c:80:0: style: The function 'GetSysClock' is never used. [unusedFunction]
+
+^
+sample/boards/stm32h743_openmv/system_stm32h7xx_HSI.c:680:0: style: The function 'HAL_GetREVID' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_hspi.c:56:0: style: The function 'HSPI_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_hspi.c:24:0: style: The function 'HSPI_Mode' is never used. [unusedFunction]
+
+^
+driver_ch56x/tusb_dev_drv_ch56x.c:534:0: style: The function 'LINK_IRQHandler' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:90:0: style: The function 'LowPower_Halt' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:76:0: style: The function 'LowPower_Idle' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:104:0: style: The function 'LowPower_Sleep' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwm.c:49:0: style: The function 'PWMX_ACTOUT' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwm.c:19:0: style: The function 'PWMX_CycleCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:22:0: style: The function 'PWR_PeriphClkCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_pwr.c:53:0: style: The function 'PWR_PeriphWakeUpCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:33:0: style: The function 'SPI0_DataMode' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:164:0: style: The function 'SPI0_MasterDMARecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:145:0: style: The function 'SPI0_MasterDMATrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:17:0: style: The function 'SPI0_MasterDefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:119:0: style: The function 'SPI0_MasterRecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:77:0: style: The function 'SPI0_MasterRecvByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:64:0: style: The function 'SPI0_MasterSendByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:92:0: style: The function 'SPI0_MasterTrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:182:0: style: The function 'SPI0_SlaveInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:222:0: style: The function 'SPI0_SlaveRecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:195:0: style: The function 'SPI0_SlaveRecvByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:208:0: style: The function 'SPI0_SlaveSendByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:248:0: style: The function 'SPI0_SlaveTrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:292:0: style: The function 'SPI1_DataMode' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:423:0: style: The function 'SPI1_MasterDMARecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:404:0: style: The function 'SPI1_MasterDMATrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:275:0: style: The function 'SPI1_MasterDefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:378:0: style: The function 'SPI1_MasterRecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:336:0: style: The function 'SPI1_MasterRecvByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:323:0: style: The function 'SPI1_MasterSendByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:351:0: style: The function 'SPI1_MasterTrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:441:0: style: The function 'SPI1_SlaveInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:481:0: style: The function 'SPI1_SlaveRecv' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:454:0: style: The function 'SPI1_SlaveRecvByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:467:0: style: The function 'SPI1_SlaveSendByte' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_spi.c:507:0: style: The function 'SPI1_SlaveTrans' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c:76:0: style: The function 'SYS_GetInfoSta' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c:87:0: style: The function 'SYS_ResetExecute' is never used. [unusedFunction]
+
+^
+sample/host/simple_host.c:64:0: style: The function 'SysTick_Handler' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:141:0: style: The function 'TMR0_CapInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:57:0: style: The function 'TMR0_EXTSignalCounterInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/tusb_dev_drv_ch56x.c:507:0: style: The function 'TMR0_IRQHandler' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:96:0: style: The function 'TMR0_PWMInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:155:0: style: The function 'TMR1_CapInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:186:0: style: The function 'TMR1_DMACfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:70:0: style: The function 'TMR1_EXTSignalCounterInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:111:0: style: The function 'TMR1_PWMInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:31:0: style: The function 'TMR1_TimerInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:169:0: style: The function 'TMR2_CapInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:208:0: style: The function 'TMR2_DMACfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:83:0: style: The function 'TMR2_EXTSignalCounterInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:126:0: style: The function 'TMR2_PWMInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_timer.c:44:0: style: The function 'TMR2_TimerInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:139:0: style: The function 'UART0_ByteTrigCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:18:0: style: The function 'UART0_DefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:193:0: style: The function 'UART0_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:418:0: style: The function 'UART0_RecvString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:290:0: style: The function 'UART0_Reset' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:335:0: style: The function 'UART0_SendString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:151:0: style: The function 'UART1_ByteTrigCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:33:0: style: The function 'UART1_DefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:219:0: style: The function 'UART1_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:437:0: style: The function 'UART1_RecvString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:301:0: style: The function 'UART1_Reset' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:356:0: style: The function 'UART1_SendString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:163:0: style: The function 'UART2_ByteTrigCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:48:0: style: The function 'UART2_DefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:245:0: style: The function 'UART2_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:456:0: style: The function 'UART2_RecvString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:312:0: style: The function 'UART2_Reset' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:377:0: style: The function 'UART2_SendString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:175:0: style: The function 'UART3_ByteTrigCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:63:0: style: The function 'UART3_DefInit' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:271:0: style: The function 'UART3_INTCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:475:0: style: The function 'UART3_RecvString' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:323:0: style: The function 'UART3_Reset' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_uart.c:398:0: style: The function 'UART3_SendString' is never used. [unusedFunction]
+
+^
+sample/boards/stm32f072c8t6/board.c:142:0: style: The function 'USART1_IRQHandler' is never used. [unusedFunction]
+
+^
+sample/boards/stm32f107vc/board.c:89:0: style: The function 'USART2_IRQHandler' is never used. [unusedFunction]
+
+^
+sample/boards/stm32f407_evk/board.c:98:0: style: The function 'USART3_IRQHandler' is never used. [unusedFunction]
+
+^
+sample/boards/stm32f723e_disco/board.c:102:0: style: The function 'USART6_IRQHandler' is never used. [unusedFunction]
+
+^
+driver_ch56x/tusb_dev_drv_ch56x.c:699:0: style: The function 'USBHS_IRQHandler' is never used. [unusedFunction]
+
+^
+driver_ch56x/tusb_dev_drv_ch56x.c:647:0: style: The function 'USBSS_IRQHandler' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c:135:0: style: The function 'WWDG_ClearFlag' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c:103:0: style: The function 'WWDG_ITCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/Peripheral/src/CH56x_sys.c:120:0: style: The function 'WWDG_ResetCfg' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:71:0: style: The function '__get_FCSR' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:33:0: style: The function '__get_FFLAGS' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:52:0: style: The function '__get_FRM' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:349:0: style: The function '__get_MARCHID' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:205:0: style: The function '__get_MCAUSE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:262:0: style: The function '__get_MCYCLE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:281:0: style: The function '__get_MCYCLEH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:186:0: style: The function '__get_MEPC' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:371:0: style: The function '__get_MHARTID' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:128:0: style: The function '__get_MIE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:360:0: style: The function '__get_MIMPID' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:300:0: style: The function '__get_MINSTRET' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:319:0: style: The function '__get_MINSTRETH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:243:0: style: The function '__get_MIP' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:109:0: style: The function '__get_MISA' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:167:0: style: The function '__get_MSCRATCH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:90:0: style: The function '__get_MSTATUS' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:224:0: style: The function '__get_MTVAL' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:148:0: style: The function '__get_MTVEC' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:338:0: style: The function '__get_MVENDORID' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:82:0: style: The function '__set_FCSR' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:44:0: style: The function '__set_FFLAGS' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:63:0: style: The function '__set_FRM' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:216:0: style: The function '__set_MCAUSE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:273:0: style: The function '__set_MCYCLE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:292:0: style: The function '__set_MCYCLEH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:197:0: style: The function '__set_MEPC' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:139:0: style: The function '__set_MIE' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:311:0: style: The function '__set_MINSTRET' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:330:0: style: The function '__set_MINSTRETH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:254:0: style: The function '__set_MIP' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:120:0: style: The function '__set_MISA' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:178:0: style: The function '__set_MSCRATCH' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:101:0: style: The function '__set_MSTATUS' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:235:0: style: The function '__set_MTVAL' is never used. [unusedFunction]
+
+^
+driver_ch56x/ch56xlib/RVMSIS/core_riscv.c:159:0: style: The function '__set_MTVEC' is never used. [unusedFunction]
+
+^
+core/teeny_usb_retarget.c:78:0: style: The function '_write' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4201:0: style: The function 'f_close' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4645:0: style: The function 'f_closedir' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4798:0: style: The function 'f_getfree' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:6382:0: style: The function 'f_gets' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4416:0: style: The function 'f_lseek' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:5032:0: style: The function 'f_mkdir' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:3657:0: style: The function 'f_mount' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:3705:0: style: The function 'f_open' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4579:0: style: The function 'f_opendir' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:6721:0: style: The function 'f_printf' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:6681:0: style: The function 'f_putc' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:6701:0: style: The function 'f_puts' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4675:0: style: The function 'f_readdir' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:5116:0: style: The function 'f_rename' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4763:0: style: The function 'f_stat' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4888:0: style: The function 'f_truncate' is never used. [unusedFunction]
+
+^
+third_part/fatfs/source/ff.c:4938:0: style: The function 'f_unlink' is never used. [unusedFunction]
+
+^
+core/teeny_usb_retarget.c:119:0: style: The function 'fgetc' is never used. [unusedFunction]
+
+^
+sample/boards/stm32f072c8t6/board.c:95:0: style: The function 'flash_write' is never used. [unusedFunction]
+
+^
+core/teeny_usb_retarget.c:108:0: style: The function 'fputc' is never used. [unusedFunction]
+
+^
+core/teeny_usb_retarget.c:94:0: style: The function 'getchar' is never used. [unusedFunction]
+
+^
+class/cdc/tusbd_cdc.c:38:0: style: The function 'tusb_cdc_send_state' is never used. [unusedFunction]
+
+^
+class/tusbh.c:452:0: style: The function 'tusb_host_channel_event' is never used. [unusedFunction]
+
+^
+class/tusbh.c:432:0: style: The function 'tusb_host_port_changed' is never used. [unusedFunction]
+
+^
+class/tusbh.c:440:0: style: The function 'tusb_host_sof_event' is never used. [unusedFunction]
+
+^
+core/teeny_usb_host.c:71:0: style: The function 'tusb_host_transfer_done' is never used. [unusedFunction]
+
+^
+core/teeny_usb_no_os.c:69:0: style: The function 'tusb_mq_free' is never used. [unusedFunction]
+
+^
+class/tusbh_xfer.c:183:0: style: The function 'tusbh_clear_ep_feature' is never used. [unusedFunction]
+
+^
+class/hid/tusbh_hid.c:287:0: style: The function 'tusbh_hid_send_data' is never used. [unusedFunction]
+
+^
+class/hid/tusbh_hid.c:299:0: style: The function 'tusbh_set_keyboard_led' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
